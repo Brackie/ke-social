@@ -6,3 +6,7 @@
 export const sayHello = (userName: string): string => {
     return 'Welcome ' + userName + '!'
 }
+
+// export const goToLink = (history: ) => {
+//     history.push()
+// }

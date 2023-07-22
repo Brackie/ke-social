@@ -1,9 +1,4 @@
-<h1 align="center">New React App</h1>
-
-<br />
-
-This is a blank README file that you can customize at your needs.\
-Describe your project, how it works and how to contribute to it.
+<h1 align="center">KE Social</h1>
 
 <br />
 

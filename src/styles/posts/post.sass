@@ -1,0 +1,78 @@
+@import '../_variables'
+@import '../_mixins'
+
+.post
+	width: 100%
+	height: auto
+	position: relative
+	padding: 25px 5px 10px 5px
+	border-bottom: 1.5px $divider-color solid
+
+.post 
+	.user-info
+		display: flex
+		justify-content: space-between
+		align-items: center
+		align-self: stretch
+
+	.user-info 
+		img.profile
+			width: 32px
+			height: 32px
+			flex-grow: 0
+			border-radius: 50%
+			object-fit: cover
+
+		.header-details
+			flex-basis: 75%
+
+		.header-details h3
+			color: $primary-social-white
+			font-family: HK Grotesk
+			font-size: 14px
+			font-style: normal
+			font-weight: 700
+			line-height: 16px /* 114.286% */
+			margin: 0
+
+		.header-details span
+			color: $secondary-lighter-gray
+			font-family: HK Grotesk
+			font-size: 12px
+			font-style: normal
+			font-weight: 400
+			line-height: 16px /* 133.333% */
+
+		img.options
+			width: 20px
+			height: 20px
+			flex-grow: 0
+
+	.content
+		width: 100%
+		height: 100%
+		text-align: center
+
+	.content p
+		margin: 0
+		margin-top: 15px
+		text-align: left
+
+	.content img
+		width: 90%
+		height: auto
+		margin-top: 10px
+		object-fit: cover
+		border-radius: 16px 
+
+	.interactions
+		width: 95%
+		margin: auto
+		margin-top: 15px
+
+	.interactions .action
+		width: auto
+		flex-grow: 1
+
+	.interactions .action img
+		margin-right: 6px

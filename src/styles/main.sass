@@ -2,23 +2,33 @@
 @import './_mixins'
 
 *
-  box-sizing: border-box
-  outline: none
+	box-sizing: border-box
+	outline: none
 
 html,
 body
-  height: 100%
-  overflow-x: hidden
+	height: 100%
+	overflow-x: hidden
 
-body 
-  position: relative
-  margin: 0
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  color: $main-text-color
-  background-color: $main-background-color
-  font-size: $main-text-size
+body
+	position: relative
+	margin: 0
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	color: $main-text-color
+	background-color: $main-background-color
+	font-size: $main-text-size
 
-code 
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
+code
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
+
+.container
+	max-width: 400px
+	margin: auto
+
+.row
+	display: flex
+	justify-content: space-between
+	align-items: center
+	align-self: stretch

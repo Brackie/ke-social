@@ -1,0 +1,24 @@
+@import '../_variables'
+@import '../_mixins'
+
+.bottom-nav
+    width: 100%
+    height: auto
+    position: absolute
+    left: 0
+    bottom: 0
+    padding: 5px
+    background: $main-background-color
+
+    .icon
+        width: auto
+        height: auto
+        flex-basis: 20%
+    
+    .active
+        width: 50px
+        height: 50px
+        padding: 10px
+        border-radius: 50%
+        background: $primary-gradient
+        transform: translateY(-5px)
