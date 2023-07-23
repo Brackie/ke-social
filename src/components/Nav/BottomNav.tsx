@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import '../../styles/partials/_bottomnav.sass'
 import feed from '../../images/Feed.png'
@@ -6,7 +7,6 @@ import search from '../../images/search.png'
 import add from '../../images/Plus.png'
 import alert from '../../images/Alert.png'
 import account from '../../images/Profile.png'
-import { access } from 'fs'
 
 const BottomNav: React.FC = (): JSX.Element => {
 
@@ -14,36 +14,45 @@ const BottomNav: React.FC = (): JSX.Element => {
 		<div className='bottom-nav'>
 			<div className="row">
 				<div className="icon">
-
-					<img
-						src={feed}
-						alt="Feed"
-					/>
+					<Link to="/">
+						<img
+							src={feed}
+							alt="Feed"
+						/>
+					</Link>
 				</div>
 				<div className="icon">
-					<img
-						src={search}
-						alt="Search"
-					/>
+					<Link to="/posts">
+						<img
+							src={search}
+							alt="Search"
+						/>
+					</Link>
 				</div>
 				<div className="icon">
-					<img
-						src={add}
-						alt="Post"
-						className='active'
-					/>
+					<Link to="/create">
+						<img
+							src={add}
+							alt="Post"
+							className='active'
+						/>
+					</Link>
 				</div>
 				<div className="icon">
-					<img
-						src={alert}
-						alt="Notification"
-					/>
+					<Link to="/alerts">
+						<img
+							src={alert}
+							alt="Notification"
+						/>
+					</Link>
 				</div>
 				<div className="icon">
-					<img
-						src={account}
-						alt="Profile"
-					/>
+					<Link to="/account">
+						<img
+							src={account}
+							alt="Profile"
+						/>
+					</Link>
 				</div>
 			</div>
 		</div>

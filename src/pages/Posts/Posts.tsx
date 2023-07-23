@@ -49,9 +49,11 @@ const Posts: React.FC = () => {
 
   return (
     <div className='container'>
-      <ToolBar title='Posts'>
+      <ToolBar 
+        title='Posts'
+      >
         <div className='search'>
-          <input type="text" value='Search for people, posts, tags...'/>
+          <input type="text" placeholder='Search for people, posts, tags...'/>
         </div>
       </ToolBar>
 

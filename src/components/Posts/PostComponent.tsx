@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import moment from 'moment'
 
 import '../../styles/posts/post.sass'
@@ -8,6 +9,7 @@ import options from '../../images/options.png'
 import likes from '../../images/Like.png'
 import comments from '../../images/Comment.png'
 import shares from '../../images/Share.png'
+import { ROUTES } from '../../resources/routes-constants'
 
 interface PostProps {
   post: Post
@@ -16,26 +18,27 @@ interface PostProps {
 const PostComponent: React.FC<PostProps> = ({ post }): JSX.Element  => {
   console.log(post)
 
-  /**
-   * On component render sets the date state to current date and time
-   */
-  useEffect(() => {
-  }, [])
+  const navigate = useNavigate()
+
+  const viewPost = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    navigate(ROUTES.VIEWPOSTSPAGE_ROUTE, {
+      state: {
+        postId: post.id
+      }
+    })
+  };
 
   return (
-    <div className='post'>
+    <div 
+      className='post'
+      onClick={e => viewPost(e)}
+    >
       <div className='user-info'>
-        {
-          post.user?.profile_image_url ? (
-            <img 
-              src={ post.user.profile_image_url }
-              className='profile'
-            />
-          ) : (<img 
-            src={ profile }
-            className='profile'
-          />)
-        }
+        <img 
+          src={ post.user?.profile_image_url ? post.user.profile_image_url : profile }
+          className='profile'
+        />
         <div className='header-details'>
           <h3>{ post.user.name }</h3>
           <span>{ moment(post.created_at).format("ddd, hA") }</span>
