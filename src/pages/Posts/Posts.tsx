@@ -3,12 +3,22 @@ import React, { useState } from 'react'
 import '../../styles/posts/posts.sass'
 import PostComponent from '../../components/Posts/PostComponent'
 import { 
-  Post
+  Post,
+  Tag
 } from '../../types/post'
-import message from '../images/Message.png'
+import ToolBar from '../../components/Nav/ToolBar'
 import BottomNav from '../../components/Nav/BottomNav'
 
 const Posts: React.FC = () => {
+  const [tags, setTags] = useState<Tag[] | []>([
+    { id: 1, tag: "All", },
+    { id: 2, tag: "Profiles", },
+    { id: 3, tag: "Photos", },
+    { id: 4, tag: "Videos", },
+    { id: 5, tag: "Text", },
+    { id: 6, tag: "Links", },
+  ])
+
   const [posts, setPosts] = useState<Post[] | []>([
     {
       id: 1,
@@ -39,19 +49,31 @@ const Posts: React.FC = () => {
 
   return (
     <div className='container'>
-      <div className='posts'>
+      <ToolBar title='Posts'>
         <div className='search'>
-          <input type="text" placeholder='Search'/>
+          <input type="text" value='Search for people, posts, tags...'/>
+        </div>
+      </ToolBar>
+
+      <div className='posts'>
+        <div className="tags">
+          <div className="row">
+            {
+              tags.map(tag => (
+                <div key={tag.id} className="tag">
+                  <span>{ tag.tag }</span>
+                </div>
+              ))
+            }
+          </div>
         </div>
 
-        <section className='featured-posts'>
-          {posts.map(post => (
-            <PostComponent key={post.id} post={post} />
-          ))}
-        </section>
-
-        <BottomNav></BottomNav>
+        {posts.map(post => (
+          <PostComponent key={post.id} post={post} />
+        ))}
       </div>
+
+      <BottomNav></BottomNav>
     </div>
   )
 }

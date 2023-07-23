@@ -1,38 +1,30 @@
 @import '../_variables'
 @import '../_mixins'
 
-.home
-	width: 100%
+.posts
+	width: 90%
 	margin: auto
+	margin-top: 80px
 	padding-top: 10px
 	position: relative
 
-.message-icon
-	position: absolute
-	top: 20px
-	right: 10px
-	border: 2px $white solid
-	border-radius: 50%
-	padding: 5px
-
-.welcome h2
-	color: $white
-	font-family: HK Grotesk
-	font-size: 18px
-	font-style: normal
-	font-weight: 700
-	line-height: 24px /* 133.333% */
-	margin-left: 10px
-
-.stories
-	width: 90%
-	margin: auto
-	margin-top: 30px
-	display: flex
-	flex-direction: row
-	gap: 15px
-
-.featured-posts
-	width: 90%
-	margin: auto
-	margin-top: 30px
+	.tags
+		width: 90%
+		margin: auto
+		margin-top: 20px
+		overflow-x: scroll
+	
+	.tag
+		width: auto
+		flex-grow: 1
+		text-align: center
+		color: $primary-social-white
+		font-family: HK Grotesk
+		font-size: 12px
+		font-style: normal
+		font-weight: 400
+		line-height: normal
+		border-radius: 18px
+		padding: 5px 10px
+		margin: 0 2.5px
+		border: 1px $secondary-lighter-gray solid

@@ -103,9 +103,9 @@ const Home: React.FC = () => {
             <PostComponent key={post.id} post={post} />
           ))}
         </section>
-
-        <BottomNav></BottomNav>
       </div>
+
+      <BottomNav></BottomNav>
     </div>
   )
 }

@@ -8,6 +8,11 @@ export interface Comment{
     user: User
 }
 
+export interface Tag {
+    id: number
+    tag: string
+}
+
 export interface Post {
     id: number
     content?: string
@@ -15,6 +20,7 @@ export interface Post {
     image_url?: string
     likes: number
     shares: number
+    tags?: Tag[]
     created_at: string
     user: User
 }

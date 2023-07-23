@@ -8,12 +8,13 @@ import alert from '../../images/Alert.png'
 import account from '../../images/Profile.png'
 import { access } from 'fs'
 
-const BottomNav: React.FC = () => {
+const BottomNav: React.FC = (): JSX.Element => {
 
 	return (
 		<div className='bottom-nav'>
 			<div className="row">
 				<div className="icon">
+
 					<img
 						src={feed}
 						alt="Feed"
