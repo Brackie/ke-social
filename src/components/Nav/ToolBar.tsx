@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import '../../styles/partials/_toolbar.sass'
 import back from '../../images/Arrow Left.png'
@@ -10,11 +11,17 @@ interface ToolBarProps {
 }
 
 const ToolBar: React.FC<ToolBarProps> = ({ children, title, backButtonVisible }): JSX.Element => {
-	const [backButtonDisplay, setBackButtonDisplay] = useState<string>("block");
+	const [backButtonDisplay, setBackButtonDisplay] = useState<string>("block")
+	const navigate = useNavigate()
 
 	useEffect(() => {
 		setBackButtonDisplay(backButtonVisible ? "block" : "none")
 	}, [backButtonVisible])
+
+	const goBack = (e: React.MouseEvent<HTMLImageElement>) => {
+		e.preventDefault()
+		navigate(-1)
+	}
 
 	return (
 		<div className='toolbar'>
@@ -23,6 +30,7 @@ const ToolBar: React.FC<ToolBarProps> = ({ children, title, backButtonVisible })
 				src={back}
 				alt="Back"
 				className='back'
+				onClick={e => goBack(e)}
 			/>
 			<h2>{ title }</h2>
 			{ children }
