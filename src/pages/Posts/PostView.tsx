@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import '../../styles/posts/post-view.sass'
+import send from '../../images/Send.png'
 import PostComponent from '../../components/Posts/PostComponent'
-import { Post, Comment } from '../../types/post'
+import { Post } from '../../types/post'
 import ToolBar from '../../components/Nav/ToolBar'
+import IconButton from '../../components/IconButton'
 import CommentComponent from '../../components/Posts/CommentComponent'
 
 interface PostViewProps {
@@ -57,19 +59,27 @@ const PostView: React.FC = (): JSX.Element => {
 
   return (
     <div className='container'>
-      <ToolBar 
-        title='Posts' 
+      <ToolBar
+        title='Posts'
         backButtonVisible={true}
       />
 
       <div className='post-view'>
         <PostComponent post={post} />
         <div className="comments">
-          <h3>COMMENTS ({ post.comments?.length ? post.comments.length : 0 })</h3>
+          <h3>COMMENTS ({post.comments?.length ? post.comments.length : 0})</h3>
           {post?.comments ? post.comments.map(comment => (
-            (<CommentComponent key={comment.id} comment={comment}/>)
+            (<CommentComponent key={comment.id} comment={comment} />)
           )) : null}
         </div>
+      </div>
+
+      <div className="add-comment">
+        <input type="text" placeholder='Type your comment here...' />
+        <IconButton
+          fill='primary'
+          icon={send}
+        />
       </div>
     </div>
   )

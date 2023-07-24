@@ -74,6 +74,13 @@ const CreatePost: React.FC = (): JSX.Element => {
             </div>
           </div>
         </div>
+
+        <div className="switch">
+          <div className="row">
+            <button className='active'>Post</button>
+            <button>Story</button>
+          </div>
+        </div>
       </div>
 
       <BottomNav></BottomNav>

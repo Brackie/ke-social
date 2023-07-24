@@ -91,7 +91,7 @@ const Profile: React.FC = () => {
                 fill='outline'
                 border='1.5px #fff solid'
                 content='Edit Profile'
-              ></Button>
+              />
             </div>
           </div>
         </div>

@@ -70,4 +70,39 @@
             background: $secondary-dark-grey
 
             img
-                margin: 0 10px 
+                margin: 0 10px
+
+    .switch
+        width: 160px
+        position: fixed
+        bottom: 100px
+        left: 50%
+        margin-left: -80px
+        display: flex
+        padding: 2px 16px
+        justify-content: center
+        align-items: center
+        gap: 10px
+        border-radius: 16px
+        background: $primary-dark-black
+        border: 1px solid $secondary-dark-grey
+
+        button
+            padding: 2px 16px
+            justify-content: center
+            align-items: center
+            gap: 10px
+            border: 0
+            border-radius: 16px
+            background: transparent
+            color: $white
+            font-family: $font-hanken-grotesk
+            font-size: 13px
+            font-style: normal
+            font-weight: 700
+            line-height: normal
+            letter-spacing: 1.3px
+            text-transform: uppercase
+        
+        button.active
+            background: $primary-gradient
