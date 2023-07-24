@@ -1,6 +1,29 @@
 @import '../_variables'
 @import '../_mixins'
 
+.toolbar
+    .overlay
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background-color: $bg-overlay-main
+        z-index: 99
+
+    .cover
+        width: 100%
+        height: 160px
+        margin-top: 10px
+        position: absolute
+        top: 0
+        left: 0
+
+    .cover img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
 .user-profile
     width: 90%
     margin: auto
@@ -20,7 +43,7 @@
         padding: 4px
         object-fit: cover
         z-index: 999
-    
+
     .name
         color: $white
         font-family: $font-hanken-grotesk
@@ -29,7 +52,7 @@
         font-weight: 700
         line-height: 32px /* 177.778% */
         margin: 5px
-    
+
     p
         font-family: $font-hanken-grotesk
         font-size: 14px
@@ -46,22 +69,19 @@
         margin: auto
         margin-top: 10px
 
-        .action h3
-            color: $white
-            font-family: $font-hanken-grotesk
-            font-size: 14px
-            font-style: normal
-            font-weight: 700
-            line-height: 18px /* 128.571% */
+        .action
+            h3
+                color: $white
+                font-family: $font-hanken-grotesk
+                font-size: 14px
+                font-style: normal
+                font-weight: 700
+                line-height: 18px /* 128.571% */
 
-        .action p
-            color: $secondary-lighter-gray
-            font-family: $font-hanken-grotesk
-            font-size: 14px
-            font-style: normal
-            font-weight: 600
-            line-height: 18px
-
-
-    
-
+            p
+                color: $secondary-lighter-gray
+                font-family: $font-hanken-grotesk
+                font-size: 14px
+                font-style: normal
+                font-weight: 600
+                line-height: 18px

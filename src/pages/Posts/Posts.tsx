@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 
 import '../../styles/posts/posts.sass'
-import PostComponent from '../../components/Posts/PostComponent'
 import { 
   Post,
   Tag
 } from '../../types/post'
+import PostComponent from '../../components/Posts/PostComponent'
 import ToolBar from '../../components/Nav/ToolBar'
 import BottomNav from '../../components/Nav/BottomNav'
 

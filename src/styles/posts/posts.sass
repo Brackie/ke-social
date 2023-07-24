@@ -1,6 +1,26 @@
 @import '../_variables'
 @import '../_mixins'
 
+.toolbar
+	.search
+		width: 100%
+		margin-top: 10px
+
+		input
+			width: 92%
+			margin: auto 2%
+			display: block
+			padding: 10px 2%
+			border: 0
+			border-radius: 32px
+			background: $secondary-dark-grey
+			color: $primary-social-white
+			font-family: $font-hanken-grotesk
+			font-size: 14px
+			font-style: normal
+			font-weight: 400
+			line-height: normal
+			
 .posts
 	width: 90%
 	margin: auto
@@ -9,21 +29,20 @@
 	position: relative
 
 	.tags
-		width: 90%
-		margin: auto
+		width: 100%
 		margin-top: 20px
-	
-	.tag
-		width: auto
-		flex-grow: 1
-		text-align: center
-		color: $primary-social-white
-		font-family: $font-hanken-grotesk
-		font-size: 12px
-		font-style: normal
-		font-weight: 400
-		line-height: normal
-		border-radius: 18px
-		padding: 5px 10px
-		margin: 0 2.5px
-		border: 1px $secondary-lighter-gray solid
+
+		.tag
+			width: auto
+			flex-grow: 1
+			text-align: center
+			color: $primary-social-white
+			font-family: $font-hanken-grotesk
+			font-size: 12px
+			font-style: normal
+			font-weight: 400
+			line-height: normal
+			border-radius: 18px
+			padding: 5px 10px
+			margin: 0 2.5px
+			border: 1px $secondary-lighter-gray solid
