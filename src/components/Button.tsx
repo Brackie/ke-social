@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({ fill, border, content }): JSX.Element =
                 setSelectedColor("#F62E8E")
         }
 
-    }, [])
+    }, [fill])
 
 	return (
 		<button style={{
@@ -31,7 +31,7 @@ const Button: React.FC<ButtonProps> = ({ fill, border, content }): JSX.Element =
             padding: '4px 10px',
             borderRadius: '24px',
             textAlign: 'center',
-            fontFamily: 'HK Grotesk',
+            fontFamily: '$font-hanken-grotesk',
             fontSize: '14px',
             fontStyle: 'normal',
             fontWeight: '700',

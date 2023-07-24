@@ -19,10 +19,9 @@ const CommentComponent: React.FC<CommentProps> = ({ comment }): JSX.Element => {
 				className='profile'
 			/>
 			<div className='comment-details'>
-				<h3>{comment.user.name}</h3>
+				<h4>{comment.user.name}</h4>
 				<p>{comment.content}</p>
-				<span>{moment(comment.created_at).format("ddd, hA")}</span>
-				<span>{comment.likes} likes</span>
+				<span>{moment(comment.created_at).format("ddd, hA")} . {comment.likes} likes</span>
 			</div>
 			<img
 				src={likes}

@@ -6,38 +6,50 @@
     justify-content: space-between
     align-items: center
     align-self: stretch
+    padding: 10px 0
 
 .comment
     img.profile
-        width: 32px
-        height: 32px
+        width: 24px
+        height: 24px
         flex-grow: 0
         border-radius: 50%
         object-fit: cover
 
-        .comment-details
-            flex-basis: 75%
-            justify-content: start
+    .comment-details
+        flex-basis: 75%
+        flex-grow: 1
+        justify-content: start
+        padding: 0 10px
 
-        .comment-details
-            h3
-                color: $primary-social-white
-                font-family: HK Grotesk
-                font-size: 14px
-                font-style: normal
-                font-weight: 700
-                line-height: 16px /* 114.286% */
-                margin: 0
+    .comment-details
+        h4
+            color: $primary-social-white
+            font-family: $font-hanken-grotesk
+            font-size: 14px
+            font-style: normal
+            font-weight: 700
+            line-height: 16px /* 114.286% */
+            margin: 2px 0
 
-            span
-                color: $secondary-lighter-gray
-                font-family: HK Grotesk
-                font-size: 12px
-                font-style: normal
-                font-weight: 400
-                line-height: 16px /* 133.333% */
+        p
+            color: $white
+            font-family: $font-hanken-grotesk
+            font-size: 13px
+            font-style: normal
+            font-weight: 400
+            line-height: 16px /* 123.077% */
+            margin: 2px 0
 
-        img.options
-            width: 20px
-            height: 20px
-            flex-grow: 0
+        span
+            color: $secondary-lighter-gray
+            font-family: $font-hanken-grotesk
+            font-size: 12px
+            font-style: normal
+            font-weight: 400
+            line-height: 16px /* 133.333% */
+
+    img.like
+        width: 16px
+        height: 16px
+        flex-grow: 0

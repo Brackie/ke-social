@@ -63,7 +63,7 @@ const PostComponent: React.FC<PostProps> = ({ post }): JSX.Element  => {
           <img 
             src={comments}
           />
-          <span className='likes'>{ post.comments?.length }</span>
+          <span className='likes'>{ post.comments?.length ? post.comments.length : 0 }</span>
         </div>
         <div className="action">
           <img 

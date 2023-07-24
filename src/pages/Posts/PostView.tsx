@@ -64,9 +64,12 @@ const PostView: React.FC = (): JSX.Element => {
 
       <div className='post-view'>
         <PostComponent post={post} />
-        {post?.comments ? post.comments.map(comment => (
-          (<CommentComponent key={comment.id} comment={comment}/>)
-        )) : null}
+        <div className="comments">
+          <h3>COMMENTS ({ post.comments?.length ? post.comments.length : 0 })</h3>
+          {post?.comments ? post.comments.map(comment => (
+            (<CommentComponent key={comment.id} comment={comment}/>)
+          )) : null}
+        </div>
       </div>
     </div>
   )
